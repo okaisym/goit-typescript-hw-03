@@ -27,12 +27,12 @@ class Key {
     constructor(key: Key) {
       this.key = key;
     }
-    comeIn(person: Person) {
+    comeIn(person: Person): void {
       if (this.door) {
         this.tenants.push(person);
       }
     }
-    abstract openDoor(key: Key | undefined): void;
+    abstract openDoor(key: Key): void;
   }
   
   class MyHouse extends House {
